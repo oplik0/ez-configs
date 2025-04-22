@@ -84,6 +84,7 @@ let
           hmModule
           ({ pkgs, ... }: {
             home-manager = {
+              backupFileExtension = ".hm-bak";
               extraSpecialArgs = extraSpecialArgs // { ezModules = ezHomeModules; };
               users = mapAttrs
                 (_: user:
